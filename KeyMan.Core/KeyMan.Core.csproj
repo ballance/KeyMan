@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AsymmetricKey.cs" />
+    <Compile Include="CryptoKeyPair.cs" />
     <Compile Include="CryptoManager.cs" />
     <Compile Include="SymmetricKey.cs" />
     <Compile Include="IKeyManager.cs" />
@@ -54,6 +55,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Keyman.Common\KeyMan.Common.csproj">
+      <Project>{E2822B4D-82EC-4C9E-AE7A-11C267EC417A}</Project>
+      <Name>KeyMan.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -9,7 +9,7 @@ namespace KeyMan.Core
     {
         public static CryptoKeyPair GenerateKeyPair(int keySize = 1024)
         {
-            var cryptoKeyPair = new CryptoKeyPair();
+            var cryptoKeyPair = new CryptoKeyPair {Id = Guid.NewGuid()};
 
             var rsaProvider = new RSACryptoServiceProvider(keySize, new CspParameters(1));
 
@@ -32,9 +32,8 @@ namespace KeyMan.Core
 
         public static byte[] CreateSymmetricKey(string password, int keyBytes = 32, int iterations = 300)
         {
-            var keyGenerator = new Rfc2898DeriveBytes(password, CryptoManager.GenerateSalt(32), iterations);
+            var keyGenerator = new Rfc2898DeriveBytes(password, GenerateSalt(32), iterations);
             return keyGenerator.GetBytes(keyBytes);
         }
-
    }
 }
