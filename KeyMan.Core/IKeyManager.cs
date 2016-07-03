@@ -1,7 +1,7 @@
-namespace Ballance.Kms.Core
+namespace KeyMan.Core
 {
     public interface IKeyManager
     {
-        string CreateKeyEncodedString();
+        string GenerateSymmetricKeyEncodedString();
     }
 }

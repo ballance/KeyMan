@@ -1,7 +1,7 @@
 ﻿using System;
-using Ballance.Kms.Core;
+using KeyMan.Core;
 
-namespace Ballance.Kms.Runner
+namespace KeyMan.Runner
 {
     public class Program
     {
@@ -9,14 +9,14 @@ namespace Ballance.Kms.Runner
         {
             Console.WriteLine("started up");
 
-            CryptoKey key1 = new CryptoKey();
+            var key1 = new SymmetricKey();
             using (var keyManager = new KeyManager())
             {
                 key1.Id = Guid.NewGuid();
-                key1.KeyText = keyManager.CreateKeyEncodedString();
+                key1.KeyStringEncoded = keyManager.GenerateSymmetricKeyEncodedString();
             }
 
-            Console.WriteLine($"Generated key [{key1.Id} / {key1.KeyText}]");
+            Console.WriteLine($"Generated key [{key1.Id} / {key1.KeyStringEncoded}]");
 
             Console.WriteLine($"Persisting key [{key1.Id}]");
 
@@ -24,9 +24,9 @@ namespace Ballance.Kms.Runner
             {
                 persister.Save(key1);
                 Console.WriteLine("Persisted key");
-                var key1Retrieved = (CryptoKey)persister.Retrieve(key1.Id);
+                var key1Retrieved = persister.Retrieve(key1.Id);
 
-                Console.WriteLine($"Retreieved key [{key1Retrieved.Id} / {key1Retrieved.KeyText}]");
+                Console.WriteLine($"Retreieved key [{key1Retrieved.Id} / {key1Retrieved.KeyStringEncoded}]");
             }
 
             Console.WriteLine("completed run.");

@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using LiteDB;
 
-namespace Ballance.Kms.Core
+namespace KeyMan.Core
 {
     public class Persister : IDisposable
     {
-        public CryptoKey Retrieve(Guid id)
+        public SymmetricKey Retrieve(Guid id)
         {
             // Check authorization for caller
             // TODO: make DAL generic to support LiteDB + others
@@ -17,7 +14,7 @@ namespace Ballance.Kms.Core
             {
                 try
                 {
-                    var key = db.GetCollection<CryptoKey>("CryptoKeys");
+                    var key = db.GetCollection<SymmetricKey>("CryptoKeys");
                     var foundKeyCollection = key.Find(b => b.Id.Equals(id));
                     if (foundKeyCollection.Any())
                     {
@@ -38,7 +35,7 @@ namespace Ballance.Kms.Core
             }
         }
 
-        public void Save(CryptoKey cryptoKey)
+        public void Save(SymmetricKey symmetricKey)
         {
             // Check authorization for caller
             // TODO: make DAL generic to support LiteDB + others
@@ -46,12 +43,12 @@ namespace Ballance.Kms.Core
             {
                 try
                 {
-                    var keyCollection = db.GetCollection<CryptoKey> ("CryptoKeys");
-                    keyCollection.Insert(cryptoKey);
+                    var keyCollection = db.GetCollection<SymmetricKey> ("CryptoKeys");
+                    keyCollection.Insert(symmetricKey);
                 }
                 catch (Exception)
                 {
-                    Console.WriteLine($"Failed to save  key [{cryptoKey.Id}]");
+                    Console.WriteLine($"Failed to save  key [{symmetricKey.Id}]");
                 }
             }
         }

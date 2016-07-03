@@ -7,8 +7,8 @@
     <ProjectGuid>{77AFF8AE-0B29-463D-A178-55E96701F7D3}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Ballance.Kms.Runner</RootNamespace>
-    <AssemblyName>Ballance.Kms.Runner</AssemblyName>
+    <RootNamespace>KeyMan.Runner</RootNamespace>
+    <AssemblyName>KeyMan.Runner</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -47,8 +47,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Ballance.Kms.Core\KeyMan.Core.csproj">
-      <Project>{3e0fe30f-c9c6-4cdf-b5d2-0a1d8a64c97e}</Project>
+    <ProjectReference Include="..\KeyMan.Core\KeyMan.Core.csproj">
+      <Project>{3E0FE30F-C9C6-4CDF-B5D2-0A1D8A64C97E}</Project>
       <Name>KeyMan.Core</Name>
     </ProjectReference>
   </ItemGroup>
