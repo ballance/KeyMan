@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ballance.Kms.Core", "..\Bal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ballance.Kms.Test", "Ballance.Kms.Test\Ballance.Kms.Test.csproj", "{784F6F22-3C32-4A82-85EF-1F76B451F98B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ballance.Kms.Common", "Ballance.Kms.Common\Ballance.Kms.Common.csproj", "{E2822B4D-82EC-4C9E-AE7A-11C267EC417A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{784F6F22-3C32-4A82-85EF-1F76B451F98B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{784F6F22-3C32-4A82-85EF-1F76B451F98B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{784F6F22-3C32-4A82-85EF-1F76B451F98B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2822B4D-82EC-4C9E-AE7A-11C267EC417A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2822B4D-82EC-4C9E-AE7A-11C267EC417A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2822B4D-82EC-4C9E-AE7A-11C267EC417A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2822B4D-82EC-4C9E-AE7A-11C267EC417A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

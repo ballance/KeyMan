@@ -51,12 +51,17 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Ballance.KMS.Test.cs" />
+    <Compile Include="EntropyTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Ballance.Kms.Core\Ballance.Kms.Core.csproj">
       <Project>{3e0fe30f-c9c6-4cdf-b5d2-0a1d8a64c97e}</Project>
       <Name>Ballance.Kms.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ballance.Kms.Common\Ballance.Kms.Common.csproj">
+      <Project>{e2822b4d-82ec-4c9e-ae7a-11c267ec417a}</Project>
+      <Name>Ballance.Kms.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
