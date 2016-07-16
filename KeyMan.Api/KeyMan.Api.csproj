@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3E0FE30F-C9C6-4CDF-B5D2-0A1D8A64C97E}</ProjectGuid>
+    <ProjectGuid>{857D2B07-F2D7-41B6-84C2-6F681728EFA5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>KeyMan.Core</RootNamespace>
-    <AssemblyName>KeyMan.Core</AssemblyName>
+    <RootNamespace>KeyMan.Api</RootNamespace>
+    <AssemblyName>KeyMan.Api</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,8 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LiteDB, Version=1.0.4.0, Culture=neutral, PublicKeyToken=5c2fff750805920e, processorArchitecture=MSIL">
-      <HintPath>..\packages\LiteDB.1.0.4\lib\net40\LiteDB.dll</HintPath>
+    <Reference Include="Nancy, Version=1.4.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nancy.1.4.3\lib\net40\Nancy.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -44,20 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AsymmetricKey.cs" />
-    <Compile Include="CryptoKeyPair.cs" />
-    <Compile Include="CryptoManager.cs" />
-    <Compile Include="SymmetricKey.cs" />
-    <Compile Include="IKeyManager.cs" />
-    <Compile Include="KeyManager.cs" />
-    <Compile Include="Persister.cs" />
+    <Compile Include="Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Keyman.Common\KeyMan.Common.csproj">
-      <Project>{E2822B4D-82EC-4C9E-AE7A-11C267EC417A}</Project>
-      <Name>KeyMan.Common</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
